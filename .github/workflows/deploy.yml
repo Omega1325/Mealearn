@@ -25,12 +25,12 @@ jobs:
           node-version: '18'
       
       - name: Install dependencies
-        working-directory: ./project\ 2
         run: npm ci
+        working-directory: 'project 2'
       
       - name: Build
-        working-directory: ./project\ 2
         run: npm run build
+        working-directory: 'project 2'
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: ./project\ 2/dist
+          path: 'project 2/dist'
       
       - name: Deploy to GitHub Pages
         id: deployment
